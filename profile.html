@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Poppins', sans-serif; 
+            color: #333;
+        }
+
+        .navbar, .footer {
+            font-family: Arial, sans-serif; 
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio h2 {
+            margin-bottom: 1rem;
+            color: #0b2957; 
+            font-size: 30px; 
+            font-weight: 600; 
+        }
+
+        .bio p {
+            color: #555;
+            font-size: 14px; 
+            line-height: 1.6;
+            font-weight: 400; 
+        }
+
+        .movies-section, .hobby-section {
+            width: 80%;
+            max-width: 900px;
+            margin-bottom: 2rem;
+        }
+
+        .movies-section h3, .hobby-section h3 {
+            color: #0b2957;
+            margin-bottom: 1.5rem;
+            font-size: 24px; 
+            font-weight: 500; 
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            justify-items: center;
+        }
+
+        .movie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .movie:hover {
+            transform: scale(1.05);
+        }
+
+        .movie img {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .movie p {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+
+        .fun-facts {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .fun-facts h3 {
+            color: #0b2957;
+            font-size: 24px; 
+            font-weight: 500;
+            margin-bottom: 1.5rem; 
+        }
+
+        .fun-facts:hover::after {
+            content: "I’m a sister to four cats, even though I’m allergic.";
+            display: block;
+            padding: 1rem;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            color: #333;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+   
+        .hobby-section {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hobby-section p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px; 
+            font-weight: 400; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Explore My Hometown</a>
+        <div class="right">
+            <a href="profile.html">Profile</a>
+            <a href="hometown.html">Description</a>
+            <a href="food.html">Local Food</a>
+            <a href="tourist.html">Tourist Places</a>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <!-- Profile Photo -->
+        <img src="SREphotoshoot2.JPG" alt="Profile Photo" class="profile-photo">
+
+        <!-- Short Bio -->
+        <div class="bio">
+            <h2>I'm Bella Puteri!</h2>
+            <p>I’m an Informatics major at Institut Teknologi Sepuluh Nopember (ITS), proudly rooted in Surabaya. When I’m not immersed into coding, you can catch me harmonizing with the choir in PSM ITS or getting creative with media in SRE ITS. Life’s a blend of passion and projects!</p>
+        </div>
+
+        <!-- Fun Facts  -->
+        <div class="fun-facts">
+            <h3>Fun Facts About Me</h3>
+            <p>Hover over to get to know me!</p>
+        </div>
+
+        <!-- Favorite Movies -->
+        <div class="movies-section">
+            <h3>Top 3 Favorite Movies</h3>
+            <div class="movies-grid">
+                <!-- 1 -->
+                <div class="movie" onclick="alert('Directed by Wes Anderson')">
+                    <img src="fantastic.jpg" alt="Movie 1">
+                    <p>Fantastic Mr. Fox</p>
+                </div>
+                <!-- 2 -->
+                <div class="movie" onclick="alert('Directed by Daniel Kwan and Daniel Scheinert')">
+                    <img src="film.webp" alt="Movie 2">
+                    <p>Everything Everywhere All at Once</p>
+                </div>
+                <!-- 3 -->
+                <div class="movie" onclick="alert('Directed by Jordan Peele')">
+                    <img src="us.jpg" alt="Movie 3">
+                    <p>Us</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobby -->
+        <div class="hobby-section">
+            <h3>My Hobbies</h3>
+            <p>I have a passion for storytelling, whether it’s through filmmaking or songwriting. I enjoy the art of storytelling to express my emotions and connect with others.</p>
+        </div>
+
+    </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&copy; 2024 Surabaya & I | Made by Bella Puteri</p>
+    </div>
+
+
+</body>
+</html>
